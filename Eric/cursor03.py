@@ -17,12 +17,14 @@ if province.upper() not in ['AB', 'BC', 'MB', 'NB', 'NF', 'NS', 'NT', 'ON', 'PE'
 
 import arcpy
 
+#environement setting
+arcpy.env.workspace = "../../../../data/Canada/Canada.gdb"
+
 #parameters
-fc = "../../../../data/Canada/Canada.gdb/MajorCities"
+fc = "MajorCities"
 fields = ['NAME', 'PROV']
 field_del = arcpy.AddFieldDelimiters(fc, 'PROV')
 sql_where = f"{field_del} = '{province.upper()}'"
-print(sql_where)
 count = 0
 
 #search cursor created, print name and province fields, and count
