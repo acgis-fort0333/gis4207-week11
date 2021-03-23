@@ -9,7 +9,7 @@ def main():
 
     #validating the number of arguments and printing usage
     if len(sys.argv) != 1:
-        print('Usage: cursor02.py ')
+        print('Usage: cursor06.py ')
         sys.exit()
 
     #if output folder does not exist, create output folder
@@ -32,7 +32,7 @@ def main():
 
 
 def fc_to_kml(fc, fields):
-    """Takes a feature class and list of fields as argument, create a kml file"""
+    """Takes a point feature class and list of fields to create a search cursor, values then used to create a kml file"""
     
     #kml header and footer
     header = '''<?xml version="1.0" encoding="UTF-8"?>
@@ -60,8 +60,7 @@ def fc_to_kml(fc, fields):
 
 
 def zip_kml(in_kml, out_kmz):
-    """Zip kml file into a kmz file"""    
-    kml_file = 'input'    
+    """Zip kml file into a kmz file"""     
     with ZipFile(out_kmz, 'w') as zip:
         zip.write(in_kml)
 

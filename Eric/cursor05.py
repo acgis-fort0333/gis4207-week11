@@ -3,7 +3,7 @@ import os
 
 #validating the number of arguments and printing usage
 if len(sys.argv) != 1:
-    print('Usage: cursor02.py ')
+    print('Usage: cursor05.py ')
     sys.exit()
 
 #if output folder does not exist, create output folder

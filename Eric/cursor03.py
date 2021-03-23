@@ -2,7 +2,7 @@ import sys
 
 #validating the number of arguments and printing usage
 if len(sys.argv) != 2:
-    print('Usage: cursor02.py <Province abbreviation>')
+    print('Usage: cursor03.py <Province abbreviation>')
     sys.exit()
 
 
