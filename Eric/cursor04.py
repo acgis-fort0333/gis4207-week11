@@ -27,7 +27,7 @@ field_del = arcpy.AddFieldDelimiters(fc, 'PROV')
 sql_where = f"{field_del} = '{province.upper()}'"
 count = 0
 
-#search cursor created, print name and province fields, and count
+#search cursor created, print name and province fields, x and y geometry and count
 with arcpy.da.SearchCursor(fc, fields, sql_where) as cursor:
     print('Name, Prov, Latitude, Longitude')
     for row in cursor:
