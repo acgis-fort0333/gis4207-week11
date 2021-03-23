@@ -1,9 +1,12 @@
 import arcpy
 
+#parameters
 fc = "../../../../data/Canada/Can_Mjr_Cities.shp"
 fields = ['NAME', 'PROV']
 count = 0
 
+
+#search cursor created, print name and province fields, and count
 with arcpy.da.SearchCursor(fc, fields) as cursor:
     print('Name, Prov')
     for row in cursor:
