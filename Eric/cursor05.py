@@ -35,7 +35,7 @@ with open ('../output/Cities.kml', 'w') as file:
             kml_string = ( 
                     f'\t<Placemark>\n'
                     f'\t\t<name>{row[0]}, {row[1]}</name>\n'
-                    f'\t\t<description>http://www.canmaps.com/topo/nts50/map/{row[4]}.htm</description>\n'
+                    f'\t\t<description>http://www.canmaps.com/topo/nts50/map/{row[4].lower()}.htm</description>\n'
                     f'\t\t<Point>\n'
                     f'\t\t\t<coordinates>{row[2]},{row[3]}</coordinates>\n'
                     f'\t\t</Point>\n'
